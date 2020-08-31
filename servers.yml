@@ -100,10 +100,10 @@ Resources:
   WebAppTargetGroup:
     Type: AWS::ElasticLoadBalancingV2::TargetGroup
     Properties:
-      HealthCheckIntervalSeconds: 10
+      HealthCheckIntervalSeconds: 35
       HealthCheckPath: /
       HealthCheckProtocol: HTTP
-      HealthCheckTimeoutSeconds: 8
+      HealthCheckTimeoutSeconds: 30
       HealthyThresholdCount: 2
       Port: 80
       Protocol: HTTP
@@ -114,11 +114,11 @@ Resources:
   WebAppLB:
     Type: AWS::ElasticLoadBalancingV2::LoadBalancer
     Properties:
-      SecurityGroups:
-        - Ref: LBSecGroup
       Subnets:
         - Fn::ImportValue: !Sub "${EnvironmentName}-PUB1-SN"
         - Fn::ImportValue: !Sub "${EnvironmentName}-PUB2-SN"
+      SecurityGroups:
+        - Ref: LBSecGroup
 
   Listener:
     Type: AWS::ElasticLoadBalancingV2::Listener
