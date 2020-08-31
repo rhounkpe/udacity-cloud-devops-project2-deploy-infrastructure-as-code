@@ -22,13 +22,5 @@
     {
         "ParameterKey": "PrivateSubnet2CIDR",
         "ParameterValue": "10.0.3.0/24"
-    },
-    {
-        "ParameterKey": "ServersMinNumber",
-        "ParameterValue": "2"
-    },
-    {
-        "ParameterKey": "ServersMaxNumber",
-        "ParameterValue": "4"
     }
 ]

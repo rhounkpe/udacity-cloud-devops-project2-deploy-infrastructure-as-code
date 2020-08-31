@@ -1,0 +1,14 @@
+[
+    {
+        "ParameterKey": "EnvironmentName",
+        "ParameterValue": "UdacityCloudDevOpsNDProject2"
+    },
+    {
+        "ParameterKey": "ServersMinNumber",
+        "ParameterValue": "2"
+    },
+    {
+        "ParameterKey": "ServersMaxNumber",
+        "ParameterValue": "4"
+    }
+]
